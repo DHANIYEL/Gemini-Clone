@@ -2,3 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+.sidebar img {
+    width: 20px;
+}
+.recent-entry {
+    /* flex flex-row gap-[10px] s p-3 pr-10 rounded-xl cursor-pointer items-center hover: text-[#282828] */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    padding-right: 40px;
+    border-radius: 50px;
+    color: #282828;
+    cursor: pointer;
+}
+.recent-entry:hover {
+    background-color: #e2e6eb;
+}

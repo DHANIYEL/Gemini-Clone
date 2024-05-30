@@ -5,7 +5,7 @@ import '../../App.css'
 
 const SideBar = () => {
 
-const [extend, setExtend] = useState(true)
+const [extend, setExtend] = useState(false)
 
   return (
     <div className='inline-flex h-full flex-col justify-between bg-[#f0f4f9] sidebar py-6 px-4'>

@@ -91,7 +91,7 @@ const MainBar = () => {
           </div>
           <p className="mx-auto my-2 text-center text-[12px] font-light">
             Gemini may display inaccurate info, including about people, so
-            double-check its responses. <u className="cursor-pointer">Your privacy & Gemini Apps</u>
+            double-check its responses. <u className="cursor-pointer"> <a href="https://support.google.com/gemini/answer/13594961?visit_id=638527756948490289-1974958993&p=privacy_notice&rd=1#privacy_notice" >Your privacy & Gemini Apps </a> </u>
           </p>
         </div>
       </div>

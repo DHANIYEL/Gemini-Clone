@@ -8,7 +8,7 @@ const MainBar = () => {
 
 
 
-  const {onSent,prevPrompt,setPrevPromptonSent,setRecentPrompt,recentPrompt,showReslut,loading,resultData,input,setInput} = useContext(Context)
+  const {onSent,recentPrompt,showReslut,loading,resultData,input,setInput} = useContext(Context)
 
   return (
     <div className="main flex-1 h-full ">

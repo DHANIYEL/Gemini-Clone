@@ -1,6 +1,16 @@
+import { useContext } from "react";
 import { assets } from "../../assets/assets";
+import { Context } from "../../context/Context";
+import '../../App.css'
+
 
 const MainBar = () => {
+
+
+  
+
+  const {onSent,prevPrompt,setPrevPromptonSent,setRecentPrompt,recentPrompt,showReslut,loading,resultData,input,setInput} = useContext(Context)
+
   return (
     <div className="main flex-1 h-full ">
       {/* NAVBAR */}
@@ -17,10 +27,12 @@ const MainBar = () => {
       </div>
 
       {/* MAIN CONTENT */}
+
       <div className=" max-w-[900px] mx-auto">
+      {!showReslut ?
+      <>
         <div className="text-[56px] my-6 p-5 font-medium text-[#c4c7c5]">
           <p>
-            {" "}
             <span className=" bg-clip-text	text-transparent bg-gradient-to-r from-[#4b90ff] to-[#ff5546] 	">
               Hello, DHANIYEL
             </span>
@@ -61,12 +73,38 @@ const MainBar = () => {
             />
           </div>
         </div>
+      </>
+      :
+
+        // THE RESULT DIV
+
+      <div className="result overflow-y-scroll h-[70vh] px-[10%] ">
+        <div className="flex items-center gap-3 my-7">
+          <img src={assets.user_icon} alt=""  className="w-10 rounded-full"/>
+          <p className="font-semibold">{recentPrompt}</p>
+        </div>
+        <div className="flex items-start gap-3">
+          <img src={assets.gemini_icon} alt="" className="w-10 rounded-full"/>
+        {loading ?
+       <div className="flex flex-col gap-2 w-full gradient"> 
+          <hr />
+          <hr />
+          <hr />
+       </div> : 
+        <p dangerouslySetInnerHTML={{__html:resultData}}></p>
+        }
+          {/* <div className="h-20 w-full bg-gradient-to-t from-gray-300 to-white sticky"></div> */}
+        </div>
+      </div> 
+      }
 
         {/* SEARCH BOX */}
 
-        <div className="m-auto absolute bottom-0 max-w-[900px] w-full mt-12">
+        <div className="m-auto fixed bottom-0 max-w-[900px] w-full mt-12">
           <div className="flex items-center justify-between gap-5 px-3 py-4 bg-[#f0f4f9] rounded-full">
             <input
+              onChange={(e)=> setInput(e.target.value)}
+              value={input}
               type="text"
               placeholder="Enter a prompt here"
               className="border-none outline-none bg-transparent px-3 flex-auto text-lg"
@@ -83,6 +121,7 @@ const MainBar = () => {
                 alt=""
               />
               <img
+                onClick={()=> onSent()}
                 src={assets.send_icon}
                 className="cursor-pointer w-6"
                 alt=""

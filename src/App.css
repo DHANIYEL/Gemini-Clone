@@ -22,3 +22,14 @@
 .recent-entry:hover {
     background-color: #e2e6eb;
 }
+
+.result::-webkit-scrollbar{
+    display: none;
+}
+.gradient hr{
+    background:linear-gradient(to right,#9ed7ff,white,#9ed7ff);
+    background-size: 800px 50px;
+    border-radius: 4px;
+    border: none;
+    height: 20px;
+}

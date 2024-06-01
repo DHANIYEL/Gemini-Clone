@@ -7,7 +7,6 @@ import '../../App.css'
 const MainBar = () => {
 
 
-  
 
   const {onSent,prevPrompt,setPrevPromptonSent,setRecentPrompt,recentPrompt,showReslut,loading,resultData,input,setInput} = useContext(Context)
 
@@ -39,7 +38,7 @@ const MainBar = () => {
           </p>
           <p>How can I help you today?</p>
         </div>
-        <div className="grid grid-cols-4 max-sm:grid-cols-2 p-5 gap-5 text-lg text-[#585858] mb-12">
+        <div className="grid grid-cols-4 max-sm:grid-cols-1 max-md:grid-cols-2 p-5 gap-5 text-lg text-[#585858] mb-12">
           <div className="h-[200px] bg-[#f0f4f9] p-4 rounded-lg shadow-sm cursor-pointer relative  hover:bg-[#dfe4ea]">
             <p>Evaluate and rank common camera categories</p>
             <img
@@ -100,32 +99,39 @@ const MainBar = () => {
 
         {/* SEARCH BOX */}
 
-        <div className="m-auto fixed bottom-0 max-w-[900px] w-full mt-12">
-          <div className="flex items-center justify-between gap-5 px-3 py-4 bg-[#f0f4f9] rounded-full">
+        <div className="m-auto fixed bottom-0 max-w-[900px] w-full mt-12 max-md:flex-none max-md:max-w-md">
+          <div className="flex items-center justify-between gap-5 px-3 py-4 bg-[#dfe4ea] rounded-full">
             <input
+            name="userInput"
               onChange={(e)=> setInput(e.target.value)}
               value={input}
               type="text"
               placeholder="Enter a prompt here"
-              className="border-none outline-none bg-transparent px-3 flex-auto text-lg"
+              className="border-none outline-none bg-transparent px-3 flex-auto text-lg max-md:py-1 max-md:px-2"
             />
-            <div className="flex gap-3  items-center">
+            <div className="flex gap-3 max-sm:gap-1  items-center">
               <img
                 src={assets.gallery_icon}
-                className="cursor-pointer w-6"
+                className="cursor-pointer w-6 max-md:w-5"
                 alt=""
               />
               <img
                 src={assets.mic_icon}
-                className="cursor-pointer w-6"
+                className="cursor-pointer w-6 max-md:w-5"
                 alt=""
               />
-              <img
+              {input ? 
+                <>
+               <img
+              
                 onClick={()=> onSent()}
                 src={assets.send_icon}
-                className="cursor-pointer w-6"
+                className="cursor-pointer w-6 max-md:w-5"
                 alt=""
+                name=""
               />
+                </>  
+                : null }
             </div>
           </div>
           <p className="mx-auto my-2 text-center text-[12px] font-light">

@@ -4,7 +4,9 @@
 *{
     font-family: outfit;
 }
-
+#root{
+    animation: fadeIn 2s;
+}
 .sidebar img {
     width: 20px;
     /* height: 20px; */
@@ -41,4 +43,18 @@
     100%{
         background-position: 800px 0px;
     }
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.recent-entry {
+    animation: fadeIn 1.2s;
 }

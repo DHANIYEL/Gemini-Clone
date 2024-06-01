@@ -15,11 +15,11 @@ const loadPrompt = async(prompt)=> {
 }
 
   return (
-    <div className='inline-flex h-full flex-col justify-between bg-[#f0f4f9] sidebar py-6 px-4'>
+    <div className='inline-flex h-full flex-col justify-between bg-[#f0f4f9] sidebar py-6 px-4 max-sm:hidden'>
     <div className='top'>
         <div>
           <img src={assets.menu_icon} className='cursor-pointer block ml-3' alt="menu_icon" onClick={()=> setExtend(prev=>!prev) }/>
-          <div onClick={()=> newChat()} className='inline-flex gap-4 items-center mt-12  bg-[#e6eaf1] py-1 px-3 rounded-full text-[14px] cursor-pointer text-gray-700'>
+          <div onClick={()=> newChat()} className='inline-flex gap-4 items-center mt-12  bg-[#e6eaf1]  hover:bg-[#d5dae1]  py-1 px-3 rounded-full text-[14px] cursor-pointer text-gray-700'>
 
             <img src={assets.plus_icon}  alt="plus_icon" />
             {extend?<p>New Chat</p>:null} 

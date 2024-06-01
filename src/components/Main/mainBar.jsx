@@ -19,9 +19,9 @@ const MainBar = () => {
           <img src={assets.down} className="w-3  h-3" alt="" />
         </div>
         <img
-          src={assets.user_icon}
+          src={assets.spider}
           className="w-10 rounded-full"
-          alt="user_icon"
+          alt="spider"
         />
       </div>
 
@@ -79,7 +79,7 @@ const MainBar = () => {
 
       <div className="result overflow-y-scroll h-[70vh] px-[10%] ">
         <div className="flex items-center gap-3 my-7">
-          <img src={assets.user_icon} alt=""  className="w-10 rounded-full"/>
+          <img src={assets.spider} alt=""  className="w-10 rounded-full"/>
           <p className="font-semibold">{recentPrompt}</p>
         </div>
         <div className="flex items-start gap-3">

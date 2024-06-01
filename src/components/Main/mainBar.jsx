@@ -86,12 +86,12 @@ const MainBar = () => {
         <div className="flex items-start gap-3">
           <img src={assets.gemini_icon} alt="" className="w-10 rounded-full"/>
         {loading ?
-       <div className="flex flex-col gap-2 w-full gradient"> 
+       <div className="flex flex-col gap-2 w-full bg-[#f6f7f8] gradient"> 
           <hr />
           <hr />
           <hr />
        </div> : 
-        <p dangerouslySetInnerHTML={{__html:resultData}}></p>
+        <p dangerouslySetInnerHTML={{__html:resultData}} className="text-lg font-light"></p>
         }
           {/* <div className="h-20 w-full bg-gradient-to-t from-gray-300 to-white sticky"></div> */}
         </div>

@@ -32,4 +32,13 @@
     border-radius: 4px;
     border: none;
     height: 20px;
+    animation: gradient 3s infinite linear;
+}
+@keyframes gradient{
+    0%{
+        background-position: -800px 0px;
+    }
+    100%{
+        background-position: 800px 0px;
+    }
 }

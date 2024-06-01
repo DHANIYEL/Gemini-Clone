@@ -1,6 +1,6 @@
 import './index.css'
 import SideBar from './components/SideBar/SideBar'
-import MainBar from './components/Main/MainBar'
+import MainBar from './components/Main/mainBar'
 
 function App() {
 

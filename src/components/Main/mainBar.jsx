@@ -41,65 +41,68 @@ const MainBar = () => {
               </p>
               <p>How can I help you today?</p>
             </div>
-            <div className="grid grid-cols-4 max-sm:grid-cols-2  p-5 gap-5 text-lg text-[#585858] mb-12 ">
-              <div
-                className="h-[200px] bg-[#f0f4f9] p-4 rounded-lg shadow-sm cursor-pointer relative  hover:bg-[#dfe4ea]"
-                onClick={() =>
-                  onSent(
-                    "NATO wraps up its largest exercise since the Cold War"
-                  )
-                }
-              >
-                <p>NATO wraps up its largest exercise since the Cold War</p>
-                <img
-                  src={assets.bulb_icon}
-                  className="w-8 absolute right-3 bottom-3 rounded-full bg-white p-1"
-                  alt=""
-                />
-              </div>
-
-              <div className="h-[200px] bg-[#f0f4f9] p-4 rounded-lg shadow-sm cursor-pointer relative hover:bg-[#dfe4ea]">
-                <p
+              <div className="grid grid-cols-4 max-sm:grid-cols-2  p-5 gap-5 text-lg text-[#585858] mb-12">
+                <div
+                  className="h-[200px] bg-[#f0f4f9] p-4 rounded-lg shadow-sm cursor-pointer relative  hover:bg-[#dfe4ea]"
                   onClick={() =>
-                    onSent("real madrid or barcelona who has more trophies")
+                    onSent(
+                      "NATO wraps up its largest exercise since the Cold War"
+                    )
                   }
                 >
-                  real madrid or barcelona who has more trophies
-                </p>
-                <img
-                  src={assets.message_icon}
-                  className="w-8 absolute right-3 bottom-3 rounded-full bg-white p-1"
-                  alt=""
-                />
+                  <p>NATO wraps up its largest exercise since the Cold War</p>
+                  <img
+                    src={assets.bulb_icon}
+                    className="w-8 absolute right-3 bottom-3 rounded-full bg-white p-1"
+                    alt=""
+                  />
+                </div>
+
+                <div className="h-[200px] bg-[#f0f4f9] p-4 rounded-lg shadow-sm cursor-pointer relative hover:bg-[#dfe4ea]">
+                  <p
+                    onClick={() =>
+                      onSent("real madrid or barcelona who has more trophies")
+                    }
+                  >
+                    real madrid or barcelona who has more trophies
+                  </p>
+                  <img
+                    src={assets.message_icon}
+                    className="w-8 absolute right-3 bottom-3 rounded-full bg-white p-1"
+                    alt=""
+                  />
+                </div>
+                <div className="h-[200px] bg-[#f0f4f9] p-4 rounded-lg shadow-sm cursor-pointer relative hover:bg-[#dfe4ea]">
+                  <p
+                    onClick={() =>
+                      onSent("why one piece is the best anime ..?")
+                    }
+                  >
+                    why one piece is the best anime ..?
+                  </p>
+                  <img
+                    src={assets.compass_icon}
+                    className="w-8 absolute right-3 bottom-3 rounded-full bg-white p-1"
+                    alt=""
+                  />
+                </div>
+                <div className="h-[200px] bg-[#f0f4f9] p-4 rounded-lg shadow-sm cursor-pointer relative hover:bg-[#dfe4ea]">
+                  <p onClick={() => onSent("PS5 exclusives coming to pc")}>
+                    PS5 exclusives coming to pc
+                  </p>
+                  <img
+                    src={assets.code_icon}
+                    className="w-8 absolute right-3 bottom-3 rounded-full bg-white p-1"
+                    alt=""
+                  />
+                </div>
               </div>
-              <div className="h-[200px] bg-[#f0f4f9] p-4 rounded-lg shadow-sm cursor-pointer relative hover:bg-[#dfe4ea]">
-                <p
-                  onClick={() => onSent("why one piece is the best anime ..?")}
-                >
-                  why one piece is the best anime ..?
-                </p>
-                <img
-                  src={assets.compass_icon}
-                  className="w-8 absolute right-3 bottom-3 rounded-full bg-white p-1"
-                  alt=""
-                />
-              </div>
-              <div className="h-[200px] bg-[#f0f4f9] p-4 rounded-lg shadow-sm cursor-pointer relative hover:bg-[#dfe4ea]">
-                <p onClick={() => onSent("PS5 exclusives coming to pc")}>
-                  PS5 exclusives coming to pc
-                </p>
-                <img
-                  src={assets.code_icon}
-                  className="w-8 absolute right-3 bottom-3 rounded-full bg-white p-1"
-                  alt=""
-                />
-              </div>
-            </div>
+            <div className="max-sm:h-24"></div>
           </>
         ) : (
           // THE RESULT DIV
 
-          <div className="result overflow-y-scroll h-[70vh] px-[10%] ">
+          <div className="result overflow-y-scroll h-[77vh] px-[10%] max-sm:px-5 max-sm:py-8">
             <div className="flex items-center gap-3 my-7">
               <img src={assets.spider} alt="" className="w-10 rounded-full" />
               <p className="font-semibold">{recentPrompt}</p>
@@ -130,6 +133,7 @@ const MainBar = () => {
         {/* SEARCH BOX */}
 
         <div className="m-auto fixed bottom-0 max-w-[900px] w-full mt-12 max-md:flex-none max-md:max-w-md">
+          <div className="h-20 bg-gradient-to-b from-transparent to-white"></div>
           <div className="flex items-center justify-between gap-5 px-3 py-4 bg-[#dfe4ea] rounded-full">
             <input
               name="userInput"

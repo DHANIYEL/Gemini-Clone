@@ -8,15 +8,15 @@ const MainBar = () => {
 
 
 
-  const {onSent,recentPrompt,showReslut,loading,resultData,input,setInput} = useContext(Context)
+  const {onSent,recentPrompt,showReslut,loading,resultData,input,setInput,newChat} = useContext(Context)
 
   return (
     <div className="main flex-1 h-full ">
       {/* NAVBAR */}
       <div className="flex items-center justify-between p-5">
         <div className="flex items-center gap-1.5 text-xl text-[#585858]">
-          <p>Gemini</p>
-          <img src={assets.down} className="w-3  h-3" alt="" />
+          <p onClick={()=> newChat()} className="cursor-pointer">Gemini</p>
+          {/* <img src={assets.down} className="w-3  h-3" alt="" /> */}
         </div>
         <img
           src={assets.spider}

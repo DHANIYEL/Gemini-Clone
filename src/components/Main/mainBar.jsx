@@ -38,9 +38,9 @@ const MainBar = () => {
           </p>
           <p>How can I help you today?</p>
         </div>
-        <div className="grid grid-cols-4 max-sm:grid-cols-2  p-5 gap-5 text-lg text-[#585858] mb-12 max-sm:mb-12">
-          <div className="h-[200px] bg-[#f0f4f9] p-4 rounded-lg shadow-sm cursor-pointer relative  hover:bg-[#dfe4ea]">
-            <p>Evaluate and rank common camera categories</p>
+        <div className="grid grid-cols-4 max-sm:grid-cols-2  p-5 gap-5 text-lg text-[#585858] mb-12 max-sm:mb-[200px]">
+          <div className="h-[200px] bg-[#f0f4f9] p-4 rounded-lg shadow-sm cursor-pointer relative  hover:bg-[#dfe4ea]" onClick={()=> onSent("NATO wraps up its largest exercise since the Cold War")}>
+            <p>NATO wraps up its largest exercise since the Cold War</p>
             <img
               src={assets.bulb_icon}
               className="w-8 absolute right-3 bottom-3 rounded-full bg-white p-1"
@@ -48,7 +48,7 @@ const MainBar = () => {
             />
           </div>
           <div className="h-[200px] bg-[#f0f4f9] p-4 rounded-lg shadow-sm cursor-pointer relative hover:bg-[#dfe4ea]">
-            <p>Brainstorm presentation ideas about a topic</p>
+            <p  onClick={()=> onSent("why one piece is the best anime ..?")}>why one piece is the best anime ..?</p>
             <img
               src={assets.compass_icon}
               className="w-8 absolute right-3 bottom-3 rounded-full bg-white p-1"
@@ -56,7 +56,7 @@ const MainBar = () => {
             />
           </div>
           <div className="h-[200px] bg-[#f0f4f9] p-4 rounded-lg shadow-sm cursor-pointer relative hover:bg-[#dfe4ea]">
-            <p>Come up with a product name for a new app</p>
+            <p  onClick={()=> onSent("real madrid or barcelona who has more trophies")}>real madrid or barcelona who has more trophies</p>
             <img
               src={assets.message_icon}
               className="w-8 absolute right-3 bottom-3 rounded-full bg-white p-1"
@@ -64,7 +64,7 @@ const MainBar = () => {
             />
           </div>
           <div className="h-[200px] bg-[#f0f4f9] p-4 rounded-lg shadow-sm cursor-pointer relative hover:bg-[#dfe4ea]">
-            <p>Come up with a complex word riddle, including hints</p>
+            <p  onClick={()=> onSent("PS5 exclusives coming to pc")}>PS5 exclusives coming to pc</p>
             <img
               src={assets.code_icon}
               className="w-8 absolute right-3 bottom-3 rounded-full bg-white p-1"

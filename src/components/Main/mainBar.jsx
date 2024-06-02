@@ -30,7 +30,7 @@ const MainBar = () => {
       <div className=" max-w-[900px] mx-auto">
       {!showReslut ?
       <>
-        <div className="text-[56px] my-6 p-5 font-medium text-[#c4c7c5]">
+        <div className="text-[56px] max-sm:text-4xl my-6 p-5 font-medium text-[#c4c7c5]">
           <p>
             <span className=" bg-clip-text	text-transparent bg-gradient-to-r from-[#4b90ff] to-[#ff5546] 	">
               Hello, DHANIYEL
@@ -38,7 +38,7 @@ const MainBar = () => {
           </p>
           <p>How can I help you today?</p>
         </div>
-        <div className="grid grid-cols-4 max-sm:grid-cols-1 max-md:grid-cols-2 p-5 gap-5 text-lg text-[#585858] mb-12">
+        <div className="grid grid-cols-4 max-sm:grid-cols-2  p-5 gap-5 text-lg text-[#585858] mb-12 max-sm:mb-12">
           <div className="h-[200px] bg-[#f0f4f9] p-4 rounded-lg shadow-sm cursor-pointer relative  hover:bg-[#dfe4ea]">
             <p>Evaluate and rank common camera categories</p>
             <img
